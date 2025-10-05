@@ -11,5 +11,8 @@ export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: { globals: globals.node },
+    rules: {
+      'no-used-vars': ['warn', { argsIgnorePattern: '^_' }],
+    },
   },
 ]);
